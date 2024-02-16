@@ -23,7 +23,9 @@ function ComponenteRutaRelativa(){
         <Outlet />
     </div>)
 }
-
+function ComponenteRuta(){
+    return (<div><h3>Outro compoñente</h3></div>)
+}
 export default function Rutas(){
 
     return(
@@ -35,6 +37,7 @@ export default function Rutas(){
         <Route path="/ventas/:id" element={<ComponenteRutaRelativa />}>
             <Route path="/ventas/:id/ruta0" element={<ComponenteAnidado />}/>
         </Route>
+        <Route path="/componenteruta"/>
     </Routes>
     )
 }

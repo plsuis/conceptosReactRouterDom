@@ -24,3 +24,10 @@
         </Route>
     ```
     - Observamos qué acontece se quitamos o compoñente `<Outlet />`
+
+7. Agrego un compoñente co `Compoñente Link` de ***react-router-dom***
+    - A maiores agrego outra ruta en `Rutas.jsx`
+    ```javascript
+    <Route path="/componenteruta"/>
+    ```
+    - Agrego os links adecuados no compoñente `Links`
