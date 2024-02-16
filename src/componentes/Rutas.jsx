@@ -4,19 +4,26 @@ function Dashboard() {
     return (
       <div>
         <h1>Dashboard</h1>
-  
-        {/* This element will render either <DashboardMessages> when the URL is
-            "/messages", <DashboardTasks> at "/tasks", or null if it is "/"
-        */}
         <Outlet />
       </div>
     );
   }
+
+function ComponenteAnidado(){
+    return (
+        <div>
+            <h2>Compoñente anidado</h2>
+        </div>
+    )
+}
+
 export default function Rutas(){
 
     return(
     <Routes>
-        <Route path="/" element={<Dashboard />}/>
+        <Route path="/" element={<Dashboard />}>
+            <Route path="/ruta0" element={<ComponenteAnidado />}></Route>
+        </Route>
     </Routes>
     )
 }
