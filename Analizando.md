@@ -10,3 +10,17 @@
     ```
 4. Comentamos a etiqueta de `<Outlet />`
     - ¿Qué acontece?
+
+5. Agrego unha ruta relativa `path="contactos/:id"`.
+
+    ```javascript
+    <Route path="/contactos/:id" element={<ComponenteRutaRelativa />} />
+    ```
+6. Agregamos un compoñente anidado a unha ruta relativa:
+
+    ```javascript
+    <Route path="/ventas/:id" element={<ComponenteRutaRelativa />}>
+            <Route path="/ventas/:id/ruta0" element={<ComponenteAnidado />}/>
+        </Route>
+    ```
+    - Observamos qué acontece se quitamos o compoñente `<Outlet />`

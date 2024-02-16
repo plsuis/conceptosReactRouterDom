@@ -17,12 +17,23 @@ function ComponenteAnidado(){
     )
 }
 
+function ComponenteRutaRelativa(){
+    return(<div>
+        <h3>Esta é unha ruta relativa</h3>
+        <Outlet />
+    </div>)
+}
+
 export default function Rutas(){
 
     return(
     <Routes>
         <Route path="/" element={<Dashboard />}>
             <Route path="/ruta0" element={<ComponenteAnidado />}></Route>
+        </Route>
+        <Route path="/contactos/:id" element={<ComponenteRutaRelativa />} />
+        <Route path="/ventas/:id" element={<ComponenteRutaRelativa />}>
+            <Route path="/ventas/:id/ruta0" element={<ComponenteAnidado />}/>
         </Route>
     </Routes>
     )
