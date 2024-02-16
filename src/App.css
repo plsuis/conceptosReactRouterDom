@@ -12,11 +12,22 @@
     animation: App-logo-spin infinite 20s linear;
   }
 }
+nav{
+  background-color: rgb(146, 146, 245);
+  height: 5vh;
+  padding: 2vh;
+ 
+}
+
+.componentes{
+  background-color: white;
+}
 a{
   margin:5px;
   border:1px solid black;
   border-radius: 10px;
   padding: 10px;
+  
 }
 .App-header {
   background-color: #282c34;
