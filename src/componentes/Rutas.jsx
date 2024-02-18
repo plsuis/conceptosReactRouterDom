@@ -2,22 +2,14 @@ import { Outlet,Route,Routes,Link, useParams } from "react-router-dom";
 import React from "react";
 
 function Layout(){
-    /* const {id} = useParams()
-    console.log('estou en layout id: ',id) */
     return (<>
         <nav>
             <Link to="/">HOME</Link>
-            {/* <Link to="/ruta0">Ruta 0</Link>
-            <Link to="/componenteruta">Componente Ruta</Link>
-            <Link to="contactos/3">Ruta relativa con contactos</Link>
-            <Link to="/ventas">Ruta con ventas</Link>
-            <Link to="/ventas/5">Ruta relativa con ventas</Link>
-            <Link to="/ventas/8/ruta0">Ruta relativa con ventas</Link> */}
             <Link to="/nova">Nova</Link>
             <Link to="/nova2">Nova 2</Link>
         </nav>
    
-    <Outlet />
+        <Outlet />
         </>
     )
 }
@@ -27,7 +19,6 @@ function Layout2(){
    
     return (<>
         <nav>
-            
             <Link to="/nova/ruta2">Ruta 2</Link>
             <Link to="/">HOME</Link>
             <Link to="/ruta0">Ruta 0</Link>
@@ -38,7 +29,7 @@ function Layout2(){
             <Link to="/ventas/8/ruta0">Ruta relativa con ventas</Link>
         </nav>
    
-    <Outlet />
+        <Outlet />
         </>
     )
 }
