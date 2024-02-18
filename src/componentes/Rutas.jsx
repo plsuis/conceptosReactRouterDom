@@ -114,8 +114,8 @@ export default function Rutas(){
     return(
     <Routes>
         <Route path="/" element={<Layout />} >
-          RutasLayout()
-            {/* <Route index element={<Dashboard />} />
+         {/*  RutasLayout() */}
+            <Route index element={<Dashboard />} />
             <Route path="nova" element={<Layout2 />}>
                 <Route path="ruta2" element={<ComponenteRuta2 />} />
             </Route>
@@ -127,7 +127,7 @@ export default function Rutas(){
             </Route>
             <Route path="componenteruta" element={<ComponenteRuta />}/>
             <Route path="ruta0" element={<ComponenteAnidado />} /> 
-            <Route path="*" element={<Componente404 />}></Route> */}
+            <Route path="*" element={<Componente404 />}></Route> 
         </Route>
         <Route path="/nova2" element={<Layout2 />} >
             <Route path="ruta2" element={<ComponenteRuta2 />} />
