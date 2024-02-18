@@ -12,11 +12,16 @@ function Dashboard() {
   }
 
 function Logueo(){
-    return(<>Estou en logueo</>)
+    return(<>
+    Estou en logueo
+    <Link to="/">Home</Link>
+    </>)
 }
 
 function Rexistro(){
-    return(<>Estou en Rexistro</>)
+    return(<>Estou en Rexistro
+    <Link to="/">Home</Link>
+    </>)
 }
 export default function Rutas(){
 
