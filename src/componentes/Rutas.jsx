@@ -1,4 +1,4 @@
-import { Outlet,Route,Routes,Link, useParams } from "react-router-dom";
+import { Outlet,Route,Routes,Link, useParams,useNavigate } from "react-router-dom";
 import React from "react";
 
 function Layout(){
@@ -80,7 +80,37 @@ function Componente404(){
     return (<h1>404</h1>)
 }
 function ComponenteRuta2(){
-    return (<div className="componentes"><h3>Outro compoñente 2</h3></div>)
+    let navegarA = useNavigate()
+
+    const irAVentas = ()=>{
+        navegarA("/ventas")
+    }
+
+    let valor = 0;
+    const irAComponenteRuta = ()=>{
+        valor += 1;
+        console.log('valor ',valor)
+        if(valor === 4){
+            navegarA("/componenteruta")
+        }
+    }
+
+    const irAVentasOuComponenteRuta = (nome)=>{
+        console.log("valor: ",nome);
+        (nome == 'juan') ? navegarA("/componenteruta") : navegarA("/ventas");
+        
+
+    }
+
+    return (<div className="componentes">
+        <h3>Outro compoñente 2</h3>
+        <button onClick={irAVentas}>Ir a ventas</button>
+        <h3>Ir a Compoñente Ruta en base a un valor dunha variable local,se valor igual a 4 vai a compoñenteRuta</h3>
+        <button onClick={irAComponenteRuta}>Sumar 1</button>
+        <button onClick={irAVentasOuComponenteRuta}>Navegar a ventas</button>
+        {/* <button onClick={irAVentasOuComponenteRuta("juan")}>Navegar a componenteruta</button> */}
+        <button onClick={()=>{irAVentasOuComponenteRuta("juan")}}>Navegar a componenteruta</button>
+        </div>)
 }
 
 function RutasLayout(){
